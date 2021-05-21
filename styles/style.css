@@ -3,11 +3,11 @@
 */
 
 html {
-  background-color: rgb(255, 213, 213);
+  background-color: rgb(255, 255, 255);
 }
 
 body {
-  background-color: rgb(255, 213, 213);
+  background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -17,6 +17,7 @@ h1 {
   margin: 0;
   padding: 20px 0;
   color: #000000;
+  background-color: rgb(168, 4, 4);
 }
 
 p1 {
@@ -33,23 +34,31 @@ p2 {
 .question {
   font-family: verdana;
   background-color: rgb(153, 153, 153);
-  color: white;
-  margin: 20px;
-  padding: 20px;
+  color: #dfc1c1;
+  width: 50%;
+  margin: 5%;
+  padding: 5%;
+  border: 5px solid rgb(20, 20, 20);
 }
 
 /* Defining styling for a specific element type - large block buttons */
 .block {
   display: block;
   width: 100%;
-  border: none;
-  background-color: #53a4da; /* yellow */
+  border: 4px;
+  background-color: #53a4da7c; /* yellow */
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
   text-align: center;
 }
 
+.image {
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 10px;
+}
 /* Defining styling for a specific element with an id */
 #signature {
   font-family: verdana;
@@ -73,4 +82,15 @@ a:hover {
 
 a:active {
   text-decoration: underline;
+}
+
+.likelist {
+  list-style: none;
+  text-align: center;
+  padding-top: 1%;
+}
+.likelist li {
+  display: inline;
+  font-family: verdana;
+  color: #dcdcdc;
 }
