@@ -3,11 +3,11 @@
 */
 
 html {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 213, 213);
 }
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 213, 213);
 }
 
 h1 {
@@ -19,25 +19,20 @@ h1 {
   color: #000000;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-}
-
 p1 {
   font-family: verdana;
-  color: red;
+  color: rgb(0, 0, 0);
 }
 
 p2 {
   font-family: verdana;
-  color: red;
+  color: rgb(0, 0, 0);
 }
 
 /* Defining styling for a specific element type - each question */
 .question {
   font-family: verdana;
-  background-color: rgb(224, 172, 172);
+  background-color: rgb(153, 153, 153);
   color: white;
   margin: 20px;
   padding: 20px;
