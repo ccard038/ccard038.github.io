@@ -14,10 +14,10 @@ h1 {
   font-family: verdana;
   font-size: 60px;
   text-align: center;
-  padding: 0px;
+  padding: 10px;
   color: #ffffff;
   background-color: rgb(143, 3, 3);
-  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 p1 {
@@ -63,8 +63,8 @@ p2 {
 .imgcontainer {
   height: 15%;
   width: 30%;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 50%;
+  margin-bottom: 50%;
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
