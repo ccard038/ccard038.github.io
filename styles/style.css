@@ -32,6 +32,7 @@ p2 {
 
 /* Defining styling for a specific element type - each question */
 .question {
+  margin: auto;
   font-family: verdana;
   background-color: rgba(216, 216, 216, 0.651);
   color: #000000;
