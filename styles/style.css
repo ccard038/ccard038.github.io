@@ -38,7 +38,7 @@ p2 {
   width: 50%;
   height: 2%;
   margin: 2%;
-  padding: 2%;
+  padding: 5px;
   border: 5px solid rgb(20, 20, 20);
 }
 
@@ -55,18 +55,18 @@ p2 {
   text-align: center;
 }
 .intro {
-  margin: 50%;
+  margin: auto;
   text-align: center;
   padding: 5px;
 }
 .imgcontainer {
-  margin: 50%;
+  margin: auto;
   width: 58px;
   height: 114px;
-  line-height: 115px;
+  line-height: 150px;
   text-align: center;
   border: 3px solid rgb(0, 0, 0);
-  padding: 5px;
+  padding: 100px;
 }
 .image {
   max-width: 100%;
