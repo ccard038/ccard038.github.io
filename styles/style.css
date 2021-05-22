@@ -60,18 +60,18 @@ p2 {
   padding: 5px;
 }
 .imgcontainer {
-  display: flex;
-  justify-content: center;
+  margin: auto;
+  width: 50%;
   border: 3px solid rgb(0, 0, 0);
   padding: 15px;
 }
 .image {
   max-width: 50%;
   max-height: 50%;
-  display: block;
 }
 /* Defining styling for a specific element with an id */
 #signature {
+  margin: auto;
   font-family: verdana;
   text-align: right;
   color: rgb(3, 227, 243);
