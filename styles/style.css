@@ -36,9 +36,9 @@ p2 {
   background-color: rgba(216, 216, 216, 0.651);
   color: #dfc1c1;
   width: 50%;
-  height: 5%;
-  margin: 5%;
-  padding: 5%;
+  height: 2%;
+  margin: 2%;
+  padding: 2%;
   border: 5px solid rgb(20, 20, 20);
 }
 
@@ -55,12 +55,18 @@ p2 {
   text-align: center;
 }
 
-.image {
-  display: block;
-  height: 190px;
+.imgcontainer {
+  margin: 10px;
   width: 96px;
+  height: 190px;
+  line-height: 115px;
+  text-align: center;
   border: 3px solid rgb(0, 0, 0);
-  padding: 10px;
+}
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
 }
 /* Defining styling for a specific element with an id */
 #signature {
