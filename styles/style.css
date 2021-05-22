@@ -45,7 +45,8 @@ p2 {
 /* Defining styling for a specific element type - large block buttons */
 .block {
   display: block;
-  width: 100%;
+  width: 10%;
+  height: 5%;
   border: 4px;
   background-color: #53a4da7c; /* yellow */
   padding: 14px 28px;
@@ -55,8 +56,9 @@ p2 {
 }
 
 .image {
-  margin: auto;
-  width: 50%;
+  display: block;
+  height: 190px;
+  width: 96px;
   border: 3px solid rgb(0, 0, 0);
   padding: 10px;
 }
