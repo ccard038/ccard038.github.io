@@ -44,6 +44,7 @@ p2 {
 
 /* Defining styling for a specific element type - large block buttons */
 .block {
+  margin: auto;
   display: block;
   width: 10%;
   height: 5%;
@@ -70,7 +71,6 @@ p2 {
 .image {
   max-width: 100%;
   max-height: 100%;
-  vertical-align: middle;
 }
 /* Defining styling for a specific element with an id */
 #signature {
