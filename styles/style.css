@@ -44,7 +44,6 @@ p2 {
 
 /* Defining styling for a specific element type - large block buttons */
 .block {
-  margin: auto;
   display: block;
   width: 10%;
   height: 5%;
@@ -61,8 +60,6 @@ p2 {
   padding: 5px;
 }
 .imgcontainer {
-  height: 15%;
-  width: 30%;
   margin-top: 50%;
   margin-bottom: 50%;
   margin-left: 25%;
@@ -74,6 +71,7 @@ p2 {
 .image {
   max-width: 50%;
   max-height: 50%;
+  display: block;
 }
 /* Defining styling for a specific element with an id */
 #signature {
