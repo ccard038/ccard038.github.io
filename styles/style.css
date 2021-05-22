@@ -15,7 +15,7 @@ h1 {
   font-size: 60px;
   text-align: center;
   padding: 0px;
-  color: #000000;
+  color: #ffffff;
   background-color: rgb(143, 3, 3);
   margin-top: 25px;
 }
@@ -63,7 +63,10 @@ p2 {
 .imgcontainer {
   height: 15%;
   width: 30%;
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 25%;
+  margin-right: 25%;
   text-align: center;
   border: 3px solid rgb(0, 0, 0);
   padding: 15px;
