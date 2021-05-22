@@ -15,9 +15,9 @@ h1 {
   font-size: 60px;
   text-align: center;
   margin: 0;
-  padding: 20px 0;
+  padding: 0px;
   color: #000000;
-  background-color: rgb(168, 4, 4);
+  background-color: rgb(143, 3, 3);
 }
 
 p1 {
@@ -33,9 +33,10 @@ p2 {
 /* Defining styling for a specific element type - each question */
 .question {
   font-family: verdana;
-  background-color: rgb(153, 153, 153);
+  background-color: rgba(216, 216, 216, 0.651);
   color: #dfc1c1;
   width: 50%;
+  height: 5%;
   margin: 5%;
   padding: 5%;
   border: 5px solid rgb(20, 20, 20);
