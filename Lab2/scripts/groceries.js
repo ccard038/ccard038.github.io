@@ -96,33 +96,57 @@ var products = [
 
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
-// there is for sure a better way of doing this that is not O(n^2).
+// there is for sure a better way of doing this that is not O(nightmare).
 function restrictListProducts(prods, restriction) {
   let product_names = [];
 
   for (let i = 0; i < prods.length; i++) {
     for (let j = 0; j < restriction.length; j++) {
       if (restriction[j] == "vegetarian" && prods[i].vegetarian == true) {
-        product_names.push(prods[i].name);
+        if (product_names.includes(prods[i].name)) {
+          break;
+        } else {
+          product_names.push(prods[i]);
+        }
       } else if (
         restriction[j] == "glutenFree" &&
         prods[i].glutenFree == true
       ) {
-        product_names.push(prods[i].name);
+        if (product_names.includes(prods[i].name)) {
+          break;
+        } else {
+          product_names.push(prods[i]);
+        }
       } else if (restriction[j] == "organic" && prods[i].organic == true) {
-        product_names.push(prods[i].name);
+        if (product_names.includes(prods[i].name)) {
+          break;
+        } else {
+          product_names.push(prods[i]);
+        }
       } else if (
         restriction[j] == "lactoseFree" &&
         prods[i].lactoseFree == true
       ) {
-        product_names.push(prods[i].name);
+        if (product_names.includes(prods[i].name)) {
+          break;
+        } else {
+          product_names.push(prods[i]);
+        }
       } else if (restriction[j] == "nutFree" && prods[i].nutFree == true) {
-        product_names.push(prods[i].name);
-      } else if (restriction[j] == "all") {
-        product_names.push(prods[i].name);
+        if (product_names.includes(prods[i].name)) {
+          break;
+        } else {
+          product_names.push(prods[i]);
+        }
+      } else if (restriction[j] == "all" && !product_names.includes(prods[i])) {
+        if (product_names.includes(prods[i].name)) {
+          break;
+        }
+        product_names.push(prods[i]);
       }
     }
   }
+
   if (restriction.length === 4) {
     document.getElementById("selected").innerHTML =
       "Selected " +
@@ -157,6 +181,57 @@ function restrictListProducts(prods, restriction) {
     document.getElementById("selected").innerHTML = "Please make a selection.";
   }
 
+  for (let j = 0; j < restriction.length; j++) {
+    if (restriction[j] == "vegetarian") {
+      product_names = product_names.filter((item) => {
+        if (item.vegetarian == false) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+    }
+    if (restriction[j] == "glutenFree") {
+      product_names = product_names.filter((item) => {
+        if (item.glutenFreee == false) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+    }
+    if (restriction[j] == "organic") {
+      product_names = product_names.filter((item) => {
+        if (item.organic == false) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+    }
+    if (restriction[j] == "lactoseFree") {
+      product_names = product_names.filter((item) => {
+        if (item.lactoseFree == false) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+    }
+    if (restriction[j] == "nutFree") {
+      product_names = product_names.filter((item) => {
+        if (item.nutFree == false) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+    }
+  }
+  //from stackoverflow to ensure uniqueness of array, this entire solution is very slow https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects
+  product_names = product_names.filter(
+    (v, i, a) => a.findIndex((t) => t.name === v.name) === i
+  );
   return product_names;
 }
 
