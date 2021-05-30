@@ -21,7 +21,7 @@ var products = [
     price: 2.35,
   },
   {
-    name: "salmon",
+    name: "Salmon",
     vegetarian: false,
     glutenFree: true,
     lactoseFree: true,
