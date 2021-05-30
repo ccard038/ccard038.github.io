@@ -26,6 +26,23 @@ function populateListProductChoices(slct1, slct2) {
   var s1 = document.getElementById(slct1);
   var s2 = document.getElementById(slct2);
 
+  var s1 = [];
+  if (document.getElementById("Vegetarian").checked) {
+    s1.push("Vegetarian");
+  }
+  if (document.getElementById("Gluten Free").checked) {
+    s1.push("GlutenFree");
+  }
+  if (document.getElementById("Lactose Free").checked) {
+    s1.push("LactoseFree");
+  }
+  if (document.getElementById("Nut Free").checked) {
+    s1.push("NutFree");
+  }
+  if (document.getElementById("All").checked) {
+    s1.push("All");
+  }
+  var s2 = document.getElementById(slct2);
   // s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
   s2.innerHTML = "";
 
