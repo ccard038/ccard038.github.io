@@ -27,20 +27,23 @@ function populateListProductChoices(slct1, slct2) {
   var s2 = document.getElementById(slct2);
 
   var s1 = [];
-  if (document.getElementById("Vegetarian").checked) {
-    s1.push("Vegetarian");
+  if (document.getElementById("vegetarian").checked) {
+    s1.push("vegetarian");
   }
-  if (document.getElementById("GlutenFree").checked) {
-    s1.push("GlutenFree");
+  if (document.getElementById("glutenFree").checked) {
+    s1.push("glutenFree");
   }
-  if (document.getElementById("LactoseFree").checked) {
-    s1.push("LactoseFree");
+  if (document.getElementById("organic").checked) {
+    s1.push("organic");
   }
-  if (document.getElementById("NutFree").checked) {
-    s1.push("NutFree");
+  if (document.getElementById("lactoseFree").checked) {
+    s1.push("lactoseFree");
   }
-  if (document.getElementById("All").checked) {
-    s1.push("All");
+  if (document.getElementById("nutFree").checked) {
+    s1.push("nutFree");
+  }
+  if (document.getElementById("all").checked) {
+    s1.push("all");
   }
   var s2 = document.getElementById(slct2);
   // s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty

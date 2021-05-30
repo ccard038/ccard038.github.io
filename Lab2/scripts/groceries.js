@@ -8,6 +8,7 @@ var products = [
     glutenFree: true,
     lactoseFree: true,
     nutFree: true,
+    organic: true,
     price: 1.99,
   },
   {
@@ -16,6 +17,7 @@ var products = [
     glutenFree: false,
     lactoseFree: true,
     nutFree: true,
+    organic: true,
     price: 2.35,
   },
   {
@@ -24,6 +26,7 @@ var products = [
     glutenFree: true,
     lactoseFree: true,
     nutFree: true,
+    organic: true,
     price: 10.0,
   },
   {
@@ -32,6 +35,7 @@ var products = [
     glutenFree: true,
     lactoseFree: true,
     nutFree: false,
+    organic: true,
     price: 3.99,
   },
   {
@@ -40,6 +44,7 @@ var products = [
     glutenFree: true,
     lactoseFree: false,
     nutFree: true,
+    organic: true,
     price: 4.5,
   },
   {
@@ -48,6 +53,7 @@ var products = [
     glutenFree: true,
     lactoseFree: true,
     nutFree: true,
+    organic: false,
     price: 4.99,
   },
   {
@@ -56,6 +62,7 @@ var products = [
     glutenFree: true,
     lactoseFree: false,
     nutFree: true,
+    organic: false,
     price: 4.99,
   },
   {
@@ -64,6 +71,7 @@ var products = [
     glutenFree: true,
     lactoseFree: true,
     nutFree: true,
+    organic: true,
     price: 9.99,
   },
   {
@@ -72,6 +80,7 @@ var products = [
     glutenFree: true,
     lactoseFree: true,
     nutFree: true,
+    organic: true,
     price: 1.45,
   },
   {
@@ -80,6 +89,7 @@ var products = [
     glutenFree: true,
     lactoseFree: true,
     nutFree: true,
+    organic: true,
     price: 1.99,
   },
 ];
@@ -91,16 +101,18 @@ var products = [
 function restrictListProducts(prods, restriction) {
   let product_names = [];
 
-  for (let i = 0; i < prods.length; i += 1) {
-    if (restriction == "Vegetarian" && prods[i].Vegetarian == true) {
+  for (let i = 0; i < prods.length; i++) {
+    if (restriction == "vegetarian" && prods[i].vegetarian == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "GlutenFree" && prods[i].GlutenFree == true) {
+    } else if (restriction == "glutenFree" && prods[i].glutenFree == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "LactoseFree" && prods[i].LactoseFree == true) {
+    } else if (restriction == "organic" && prods[i].organic == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "NutFree" && prods[i].NutFree == true) {
+    } else if (restriction == "lactoseFree" && prods[i].lactoseFree == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "All" && prods[i].All == true) {
+    } else if (restriction == "nutFree" && prods[i].nutFree == true) {
+      product_names.push(prods[i].name);
+    } else if (restriction == "all") {
       product_names.push(prods[i].name);
     }
   }
