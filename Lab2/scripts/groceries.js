@@ -92,15 +92,15 @@ function restrictListProducts(prods, restriction) {
   let product_names = [];
 
   for (let i = 0; i < prods.length; i += 1) {
-    if (restriction == "Vegetarian" && prods[i].vegetarian == true) {
+    if (restriction == "Vegetarian" && prods[i].Vegetarian == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "GlutenFree" && prods[i].glutenFree == true) {
+    } else if (restriction == "GlutenFree" && prods[i].GlutenFree == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "LactoseFree" && prods[i].lactoseFree == true) {
+    } else if (restriction == "LactoseFree" && prods[i].LactoseFree == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "NutFree" && prods[i].nutFree == true) {
+    } else if (restriction == "NutFree" && prods[i].NutFree == true) {
       product_names.push(prods[i].name);
-    } else if (restriction == "All") {
+    } else if (restriction == "All" && prods[i].All == true) {
       product_names.push(prods[i].name);
     }
   }
