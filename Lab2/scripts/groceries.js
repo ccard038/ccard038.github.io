@@ -3,7 +3,7 @@
 
 var products = [
   {
-    name: "brocoli",
+    name: "Brocoli",
     vegetarian: true,
     glutenFree: true,
     lactoseFree: true,
@@ -12,7 +12,7 @@ var products = [
     price: 1.99,
   },
   {
-    name: "bread",
+    name: "Bread",
     vegetarian: true,
     glutenFree: false,
     lactoseFree: true,
@@ -96,24 +96,31 @@ var products = [
 
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
-// There is for sure a better way of doing this than copy and pasting the same code for different condtions, however I'm doing this quick and dirty.
-
+// there is for sure a better way of doing this that is not O(n^2).
 function restrictListProducts(prods, restriction) {
   let product_names = [];
 
   for (let i = 0; i < prods.length; i++) {
-    if (restriction == "vegetarian" && prods[i].vegetarian == true) {
-      product_names.push(prods[i].name);
-    } else if (restriction == "glutenFree" && prods[i].glutenFree == true) {
-      product_names.push(prods[i].name);
-    } else if (restriction == "organic" && prods[i].organic == true) {
-      product_names.push(prods[i].name);
-    } else if (restriction == "lactoseFree" && prods[i].lactoseFree == true) {
-      product_names.push(prods[i].name);
-    } else if (restriction == "nutFree" && prods[i].nutFree == true) {
-      product_names.push(prods[i].name);
-    } else if (restriction == "all") {
-      product_names.push(prods[i].name);
+    for (let j = 0; j < restriction.length; j++) {
+      if (restriction[j] == "vegetarian" && prods[i].vegetarian == true) {
+        product_names.push(prods[i].name);
+      } else if (
+        restriction[j] == "glutenFree" &&
+        prods[i].glutenFree == true
+      ) {
+        product_names.push(prods[i].name);
+      } else if (restriction[j] == "organic" && prods[i].organic == true) {
+        product_names.push(prods[i].name);
+      } else if (
+        restriction[j] == "lactoseFree" &&
+        prods[i].lactoseFree == true
+      ) {
+        product_names.push(prods[i].name);
+      } else if (restriction[j] == "nutFree" && prods[i].nutFree == true) {
+        product_names.push(prods[i].name);
+      } else if (restriction[j] == "all") {
+        product_names.push(prods[i].name);
+      }
     }
   }
   if (restriction.length === 4) {
