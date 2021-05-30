@@ -30,13 +30,13 @@ function populateListProductChoices(slct1, slct2) {
   if (document.getElementById("Vegetarian").checked) {
     s1.push("Vegetarian");
   }
-  if (document.getElementById("Gluten Free").checked) {
+  if (document.getElementById("GlutenFree").checked) {
     s1.push("GlutenFree");
   }
-  if (document.getElementById("Lactose Free").checked) {
+  if (document.getElementById("LactoseFree").checked) {
     s1.push("LactoseFree");
   }
-  if (document.getElementById("Nut Free").checked) {
+  if (document.getElementById("NutFree").checked) {
     s1.push("NutFree");
   }
   if (document.getElementById("All").checked) {
