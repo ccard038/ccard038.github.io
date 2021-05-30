@@ -232,6 +232,12 @@ function restrictListProducts(prods, restriction) {
   product_names = product_names.filter(
     (v, i, a) => a.findIndex((t) => t.name === v.name) === i
   );
+
+  // on how to use javascript sort https://www.javascripttutorial.net/array/javascript-sort-an-array-of-objects/
+  product_names.sort((a, b) => {
+    return a.price - b.price;
+  });
+
   return product_names;
 }
 
