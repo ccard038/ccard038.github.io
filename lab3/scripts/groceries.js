@@ -179,7 +179,8 @@ function restrictListProducts(prods, restriction) {
       "Selected " + restriction[0];
   }
   if (restriction.length === 0) {
-    document.getElementById("selected").innerHTML = "Please make a selection.";
+    document.getElementById("selected").innerHTML =
+      'Select "No Filter" to see all items in our store';
   }
 
   for (let j = 0; j < restriction.length; j++) {
@@ -258,5 +259,5 @@ function getTotalPrice(chosenProducts) {
       totalPrice += products[i].price;
     }
   }
-  return totalPrice;
+  return Number(totalPrice.toPrecision(4));
 }

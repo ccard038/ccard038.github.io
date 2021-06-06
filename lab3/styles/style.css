@@ -34,7 +34,8 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  height: inherit;
+  min-height: 280px;
+  background-color: rgba(192, 192, 192, 0.603);
 }
 
 /* for side by side divs from https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display*/
@@ -45,18 +46,18 @@
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
-  border-right: 2px dashed black;
-  height: inherit;
-  position: sticky;
+  border-right: 2px solid black;
+  margin-right: 100px;
 }
 
 .two {
-  margin-left: 15%;
+  margin-left: 18%;
+  margin-right: 2%;
   /*height: 200px;*/
-  background-color: white;
   padding-left: 50px;
-  border-top: 2px solid;
+  border: 2px solid;
   height: inherit;
+  background-color: white;
 }
 
 /* from w3schools how to accordian https://www.w3schools.com/howto/howto_js_accordion.asp*/
@@ -113,4 +114,39 @@
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+}
+.centerB {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cartDiv {
+  width: max-content;
+  padding: 10px;
+  background-color: white;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columnC {
+  float: left;
+  flex: 10%;
+  margin: 10px;
+  width: fit-content;
+}
+
+.product {
+  width: 50px;
+  height: 50px;
 }

@@ -64,7 +64,6 @@ function populateListProductChoices(slct1, slct2) {
     // image first
     let img = new Image(200, 200);
     img.src = "/lab3/images/" + productName + ".png";
-    //img.style.flex = "5%";
     divcontainer.appendChild(img);
     divcontainer.appendChild(document.createElement("br"));
 
@@ -100,17 +99,38 @@ function selectedItems() {
 
   var c = document.getElementById("displayCart");
   c.innerHTML = "";
+  c.className = "cartDiv";
+
+  let divcontainer = document.createElement("div");
+  divcontainer.className = "columnC";
 
   // build list of selected item
   var para = document.createElement("P");
-  para.innerHTML = "You selected : ";
+  para.innerHTML = "You selected : \n";
   para.appendChild(document.createElement("br"));
   for (i = 0; i < ele.length; i++) {
     if (ele[i].checked) {
-      para.append(ele[i].value + " " + productPrice(ele[i].value));
-      para.appendChild(document.createElement("br"));
+      // image first
+      let img = new Image(50, 50);
+      img.src = "/lab3/images/" + ele[i].defaultValue + ".png";
+      img.style.alignContent = "left";
+      divcontainer.appendChild(img);
+
+      //price after
+      var inP = document.createElement("p");
+      var text = document.createTextNode(
+        ele[i].value + ": $" + productPrice(ele[i].value)
+      );
+
+      inP.appendChild(text);
+      //para.append(ele[i].value + ": $" + productPrice(ele[i].value));
+      // para.appendChild(document.createElement("br"));
+      inP.style.textAlign = "right";
+      divcontainer.appendChild(inP);
+      divcontainer.appendChild(document.createElement("br"));
       chosenProducts.push(ele[i].value);
     }
+    para.appendChild(divcontainer);
   }
 
   // add paragraph and total price
