@@ -48,6 +48,7 @@ function populateListProductChoices(slct1, slct2) {
   var s2 = document.getElementById(slct2);
   // s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
   s2.innerHTML = " ";
+  s2.className = "row";
 
   // obtain a reduced list of products based on restrictions
   var optionArray = restrictListProducts(products, s1);
@@ -58,12 +59,21 @@ function populateListProductChoices(slct1, slct2) {
 
   for (i = 0; i < optionArray.length; i++) {
     var productName = optionArray[i].name;
+    let divcontainer = document.createElement("div");
+    divcontainer.className = "column";
+    // image first
+    let img = new Image(200, 200);
+    img.src = "/lab3/images/" + productName + ".png";
+    //img.style.flex = "5%";
+    divcontainer.appendChild(img);
+    divcontainer.appendChild(document.createElement("br"));
+
     // create the checkbox and add in HTML DOM
     var checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.name = "product";
     checkbox.value = productName;
-    s2.appendChild(checkbox);
+    divcontainer.appendChild(checkbox);
 
     // create a label for the checkbox, and also add in HTML DOM
     var label = document.createElement("label");
@@ -71,8 +81,10 @@ function populateListProductChoices(slct1, slct2) {
     label.appendChild(
       document.createTextNode(productName + "	$" + productPrice(productName))
     );
-    s2.appendChild(label);
+    divcontainer.appendChild(label);
 
+    //add container to s2
+    s2.appendChild(divcontainer);
     // create a breakline node and add in HTML DOM
     s2.appendChild(document.createElement("br"));
   }
@@ -108,4 +120,24 @@ function selectedItems() {
       "Total Price is " + "$" + getTotalPrice(chosenProducts)
     )
   );
+}
+
+//from w3 schools for accordian
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }

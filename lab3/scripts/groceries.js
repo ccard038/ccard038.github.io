@@ -3,6 +3,7 @@
 
 var products = [
   {
+    // https://assets.shop.loblaws.ca/products/20145621001/b1/en/front/20145621001_front_a01_@2.png
     name: "Brocoli",
     vegetarian: true,
     glutenFree: true,
