@@ -1,0 +1,419 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- My style sheet-->
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- My own script -->
+    <script src="scripts/service.js"></script>
+
+    <title>Physiotherapy Clinic</title>
+</head>
+
+<body style="background-color: azure;">
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div style="background-color: rgb(255, 255, 255);" class = "container-lg">
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+
+    <!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+    <!-- It really has become a standard. -->
+    <!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+    <!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+    <!-- be sections in your page. -->
+    <nav class="navbar sticky-top navbar-expand-md bg-dark navbar-dark">
+        <div class="row">
+            <a class="navbar-brand" href="#">
+                <img src="images/ottawapt.png" width="100" height="100" alt="" style=" margin-left: 10px;  color: white;">
+        </div>
+            
+        <div class = "row"> 
+            <a class="navbar-brand" href="#"></a>
+                <h1 style="color: white;">Ottawa Physiotherapy Clinic</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="row"> 
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#first">
+                            <img src="images/caduceus.png" alt="logo" style="width:30px;">Services</a>
+                    </li>
+                    <br>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#second"><img src="images/outline_people_white_24dp.png" alt="logo" style="width:30px;">Physicians</a>
+                    </li>
+                    <br>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#third">
+                    <img src="images/outline_event_available_white_24dp.png" alt="logo" style="width:30px;">Booking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>   
+    </nav>
+    <br>
+    <div class=" p-3 my-3 border bg-light">
+        <h1 class=""> About Ottawa Physiotherapy Clinic</h1>
+        <p id= "first" class="p-4 my-3" style="font-size: 25px">We are a small clinic located at 3 Laurier Ave. E Ottawa Ontario</p>
+        <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing the <strong>best</strong> care to all of our customers</p>
+    </div>
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+
+    <h1 >Our clinic offers the following services</h1>
+    <!-- Accordian -->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                TCM Acupunture
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body" style="background-color:rgba(119, 136, 153, 0.11);">
+                    <div class="row">
+                        <div class="col"><strong>Acupunture is a form of alternative medicine </strong>and a key component of traditional
+                            Chinese medicine in which thin needles are inserted into the body. It is used to solve issues, including асutе раіnѕ, соmmоn соlds,
+                            fertility ѕuрроrt, immune dіѕоrdеrѕ, facial rejuvenation and mоrе.</div>
+                        <div class="col"> First visit price: $150 <br>
+                            Additional visit price: $80
+                        </div>
+                        <div class="col"><img   height="200" width="250"src="https://cdn.mos.cms.futurecdn.net/pSubdkTXtC6J8GZLJnkX9k-320-80.jpg" alt=""></div>
+                    </div>       
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                Concussion
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body" style="background-color:rgba(119, 136, 153, 0.11);">
+                    <div class="row">
+                        <div class="col">
+                            <strong>A concussion іѕ a traumatic brаіn іnjurу thаt rеѕultѕ іn temporary lоѕѕ оf nоrmаl brаіn funсtіоn.</strong>
+                            Thе bоdу hаѕ a remarkable ability tо hеаl. But thе brain ѕоmеtіmеѕ hеаlѕ ԛuіtе ѕlоwlу, аnd a соnсuѕѕіоn can hаvе a
+                            lоng-lаѕtіng іmрасt оn уоur аbіlіtу to hаndlе еvеrуdау tаѕkѕ. Our team of specialists will work with you to ensure you
+                            heal correctly.
+                        </div>
+                        <div class="col"> First visit price: $150 <br>
+                            Additional visit price: $80
+                        </div>
+                        <div class="col"><img height="200" width="250" src="https://www.brainfacts.org/-/media/Brainfacts2/Diseases-and-Disorders/Injury/Article-Images/concussion-knowable-thumbnailjpg.png" class="rounded float-right" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    Post-Operative Rehabilitation
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body" style="background-color:rgba(119, 136, 153, 0.11);">
+                    <div class="row">
+                        <div class="col"><strong>A post-op rehabilitation program is a crucial part of your post surgery recovery.</strong> The rehabilitation
+                        program determines the success of your surgery. Our
+                        specialists will help you through the recovery process which includes exercise therapy, manual therapy and pain relief
+                        regimes.</div>
+                        <div class="col"> First visit price: $150 <br>
+                            Additional visit price: $80
+                        </div>
+                        <div class="col"><img height="200" width="250"
+                            src="https://kingstonphysiotherapy.com/images/postop.jpg"
+                            class="rounded float-right" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                <button id="second" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFour">
+                    Massage Therapy
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingFour">
+                <div class="accordion-body" style="background-color:rgba(119, 136, 153, 0.11);">
+                    <div class="row">
+                        <div class="col"><strong>Massage Therapy is a centuries old form of drug-free, non-invasive healing.</strong>
+                        The therapy uses various forms of touch to: manage and reduce pain, increase circulation and immune system function,
+                        reduce stress, increase muscle flexibility and joint function, as well as contribute to a sense of well-being. Our specialists will be
+                        glad to assit you if you have muscle strain, headaches, migraines and/or carpal tunnel syndrome.</div>
+                        <div class="col"> First visit price: $150 <br>
+                            Additional visit price: $80
+                        </div>
+                        <div class="col"><img height="200" width="250" src="https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2015/11/massageTherapy-636218646-770x553-1-650x428.jpg" class="rounded float-right"
+                            alt=""></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFive">
+                    TMJ Physiotherapy
+                </button>
+            </h2>
+            <div  id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingFive"> 
+                <div class="accordion-body" style="background-color:rgba(119, 136, 153, 0.11);">
+                    <div class="row">
+                        <div class="col"><strong>TMJ disorder is a major source of discomfort, pain and impairment for many people.</strong>
+                        A TMJ disorder occurs when the joints of the jaw and the chewing muscles do not work together correctly. Our specialists will treat your symptoms with a
+                        custom treatment plan based on the cause of the disorder.</div>
+                        <div class="col"> First visit price: $150 <br>
+                            Additional visit price: $80
+                        </div>
+                        <div class="col"><img height="200" width="250"
+                            src="https://equilibriummassagetherapy.ca/wp-content/uploads/2019/08/tmj-0806-1280x500.jpg"
+                            class="rounded float-right" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Accordian -->
+<br>
+    <h1 style="text-align: center;">Meet Our Experienced Physicians!</h1> <br>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem; background-color:rgba(119, 136, 153, 0.11);">
+            <img style="padding-top: 10px;" src="images/doctor.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3>Jen Potter</h3>
+                <p class="card-text">She is an experienced rehabilitation specialist working at our clinic. She has been working in the field for over 10 years and is very exeperienced with getting you the treatment you need.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; background-color:rgba(119, 136, 153, 0.11);">
+            <img style="padding-top: 10px;" src="https://post.healthline.com/wp-content/uploads/2020/08/766x415_Benefits_of_Prostate_Massage_Therapy-1-732x415.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3>Tony Sawyer</h3>
+                <p class="card-text">He is our TMJ physiologist and has been expertly solving customers issues for 7 years and counting.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; background-color:rgba(119, 136, 153, 0.11);">
+            <img style="padding-top: 10px;" src="https://www.oxfordedu.ca/wp-content/uploads/2019/06/adobestock_255822899-hero-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3>Martin Nash</h3>
+                <p  class="card-text">He is our newest massage therapist and has been very well recieved. He is currently in his second year of tenure and would be pleased to assist you.</p>
+                <p id="third"></p>
+            </div>
+        </div>
+    </div>
+
+    <br><h1 style="text-align: center;">Interested in an appointment?</h1> <br>
+
+  <!-- form starts here-->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Yikes!</strong> Perhaps you left one of the fields empty for this to appear?
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<form>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">First Name</label>
+        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="John">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Surname</label>
+        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Doe">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input id="email" type="email" class="form-control"  placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Phone Number</label>
+        <input id = "phone" type="phone-number" class="form-control" id="exampleFormControlInput1" placeholder="(555)-555-5555">
+    </div>
+    <div class="form-group">
+        <label for="seeAnotherField">Service</label>
+        <select class="form-control" id="seeAnotherField" >
+            <option value="def" selected disabled>Please select</option>
+            <option value="mtherapist">TCM Acupunture</option>
+            <option value="rehab">Concussion</option>
+            <option value="rehab">Post-Operative Rehabilitation</option>
+            <option value="mtherapist">Massage Therapy</option>
+            <option value="tmj">TMJ Therapy</option>
+        </select>
+    </div>
+    <div style="display: none;" class="form-group" id="mtherapistdiv">
+        <label for="otherFieldm">Specialist</label>
+        <select class="form-control" id="otherFieldm">
+            <option>Martin Nash</option>
+        </select>
+    </div>
+    <div style="display: none;" class="form-group" id="rehabdiv">
+        <label for="otherFieldrehab">Specialist</label>
+        <select class="form-control" id="otherFieldrehab">
+            <option>Jen Potter</option>
+        </select>
+    </div>
+    <div  style="display: none;" class="form-group" id="tmjdiv">
+        <label for="otherFieldtmj">Specialist</label>
+        <select class="form-control" id="otherFieldtmj">
+            <option>Tony Sawyer</option>
+        </select>
+    </div>
+ 
+    <div class="form-group">
+        <label class="control-label">Appointment Time</label>
+        <div class='input'>
+            <input id = "dateInput" type='text' class="form-control"  placeholder="YYYY-MM-DD"/>
+        </div>
+    </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Preferred Time</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>9:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+            </select>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Any specific need or information we should know?</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form action="/action_page.php">
+    
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                            <label for="email"><i class="fa fa-envelope"i></i> Email</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                            <label for="city"><span class="material-icons">location_city</span> City</label>
+                            <input type="text" id="city" name="city" placeholder="Ottawa">
+    
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="province">Province</label>
+                                    <input type="text" id="province" name="province" placeholder="ON">
+                                </div>
+                                <div class="col-50">
+                                    <label for="postal">Postal</label>
+                                    <input type="text" id="postal" name="postal" placeholder="A1B 2C3">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                            <label for="ccnum">Credit card number</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                            <label for="expmonth">Exp Month</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2024">
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </form>
+            </div>
+        </div>
+        <div class="col-25">
+            <div class="container">
+                <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b></b></span></h4>
+                <p><a href="#">Product 1</a> <span class="price">$150</span></p>
+                <p><a>Holding Charge</a> <span class="price">$20</span></p>
+                <hr>
+                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+
+
+</div>
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</body>
+<p style="text-align: right;" id="signature">Site created by Cameron Cardiff!</p>
+</html>
