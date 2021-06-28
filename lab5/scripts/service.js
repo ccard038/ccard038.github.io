@@ -5,6 +5,8 @@
 // https://flaviocopes.com/javascript-regular-expressions/
 // Regular expressions can get complex, you can think in terms of a series of characters
 // or numbers
+
+var selected;
 function validatePhone(txtPhone) {
   let a = document.getElementById(txtPhone).value;
   //regular expression from stackoverflow, https://stackoverflow.com/questions/16699007/regular-expression-to-match-standard-10-digit-phone-number
@@ -154,5 +156,41 @@ $(document).ready(function () {
       $("#otherFieldm").removeAttr("required");
       $("#otherFieldm").removeAttr("data-error");
     }
+    selected = $("#seeAnotherField").find(":selected").text();
+    $("#paymentservice").html(function () {
+      var span = '<span class="price">' + "$150" + "</span>";
+      return "<p>" + selected + span + "</p>";
+    });
+    // $("#priceT").html($150);
+    /* $("select option:selected").each(function () {
+      selected = $(this).text() + " ";
+      $("#paymentservice").text("" + selected);
+    });*/
+  });
+
+  $("#submitbtn").click(function () {
+    let dateInput = $("#dateInput").val();
+    let timein = $("#time").find(":selected").text();
+    let specialist = "";
+    if ($("#otherFieldm").find(":selected")) {
+      specialist = $("#otherFieldm").find(":selected").text();
+    }
+    if ($("#otherFieldrehab").find(":selected")) {
+      specialist = $("otherFieldrehab").find(":selected").text();
+    }
+    if ($("#otherFieldmtmj").find(":selected")) {
+      specialist = $("#otherFieldtmj").find(":selected").text();
+    }
+    alert(
+      "Appointment booked for " +
+        selected +
+        "! The appointment is at " +
+        dateInput +
+        " " +
+        timein +
+        " " +
+        "with " +
+        specialist
+    );
   });
 });
