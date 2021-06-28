@@ -32,6 +32,53 @@ function validateEmail(email) {
   }
 }
 
+//https://guides.co/g/seamlessdocs-manual/29719
+function validateCC(cc) {
+  let a = document.getElementById(cc).value;
+  let filter =
+    /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
+  if (filter.test(a)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//https://stackoverflow.com/questions/35413746/regex-to-match-date-like-month-name-day-comma-and-year/35413952
+function validateMonth(month) {
+  let a = document.getElementById(month).value;
+  let filter =
+    /^(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)$/;
+  if (filter.test(a)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//https://stackoverflow.com/questions/15774555/efficient-regex-for-canadian-postal-code-function
+function validatePostalCode(pc) {
+  let a = document.getElementById(pc).value;
+  let filter =
+    /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/i;
+  if (filter.test(a)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//https://guides.co/g/seamlessdocs-manual/29719
+function validateProvince(pv) {
+  let a = document.getElementById(pv).value;
+  let filter = /^(?:AB|BC|MB|N[BLTSU]|ON|PE|QC|SK|YT)*$/;
+  if (filter.test(a)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
@@ -64,12 +111,48 @@ $(document).ready(function () {
   });
 
   $("#email").on("change", function () {
-    if (!validatEmail("email")) {
+    if (!validateEmail("email")) {
       alert("Wrong format for email");
       $("#email").val("asas");
       $("#email").addClass("error");
     } else {
       $("#email").removeClass("error");
+    }
+  });
+
+  $("#ccnum").on("change", function () {
+    if (!validateCC("cc")) {
+      alert("Wrong format for credit card");
+      $("#cc").addClass("error");
+    } else {
+      $("#cc").removeClass("error");
+    }
+  });
+
+  $("#expmonth").on("change", function () {
+    if (!validateMonth("expmonth")) {
+      alert("Not a month");
+      $("#expmonth").addClass("error");
+    } else {
+      $("#expmonth").removeClass("error");
+    }
+  });
+
+  $("#province").on("change", function () {
+    if (!validateProvince("province")) {
+      alert("Not a province (use common shortform)");
+      $("#province").addClass("error");
+    } else {
+      $("#province").removeClass("error");
+    }
+  });
+
+  $("#postal").on("change", function () {
+    if (!validatePostalCode("postal")) {
+      alert("Not a postal code");
+      $("#postal").addClass("error");
+    } else {
+      $("#postal").removeClass("error");
     }
   });
 
