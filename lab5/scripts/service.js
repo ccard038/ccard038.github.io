@@ -172,14 +172,29 @@ $(document).ready(function () {
     let dateInput = $("#dateInput").val();
     let timein = $("#time").find(":selected").text();
     let specialist = "";
-    if ($("#otherFieldm").find(":selected")) {
-      specialist = $("#otherFieldm").find(":selected").text();
+    if (
+      $("#otherFieldm")
+        .find(":selected")
+        .val()
+        .localeCompare("Please Select") !== 0
+    ) {
+      specialist = $("#otherFieldm").find(":selected").val();
     }
-    if ($("#otherFieldrehab").find(":selected")) {
-      specialist = $("otherFieldrehab").find(":selected").text();
+    if (
+      $("#rehabfield")
+        .find(":selected")
+        .val()
+        .localeCompare("Please Select") !== 0
+    ) {
+      specialist = $("#rehabfield").find(":selected").val();
     }
-    if ($("#otherFieldmtmj").find(":selected")) {
-      specialist = $("#otherFieldtmj").find(":selected").text();
+    if (
+      $("#otherFieldtmj")
+        .find(":selected")
+        .val()
+        .localeCompare("Please Select") !== 0
+    ) {
+      specialist = $("#otherFieldtmj").find(":selected").val();
     }
     alert(
       "Appointment booked for " +
