@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Noto Sans";
+  color: #333;
+}
+.navbar {
+  padding: 5px;
+  display: flex;
+  align-items: left;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #2e2e2e;
+}
+.navbar h1 {
+  color: #ffffff;
+  text-align: right;
+}
+.navbar .links {
+  margin-left: auto;
+  color: #fff;
+  align-items: left;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color: #fff;
+}
+.navbar a:hover {
+  color: #f1a635;
+}
+.content {
+  margin: 0px auto;
+  padding: 20px;
+}
+
+/* Home*/
+.home {
+  margin: 0 auto;
+  text-align: left;
+}
+.homeh {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.homeh h2 {
+  color: white;
+}
+
+.home h2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+}
+.home-border {
+  display: block;
+  width: 500px;
+  height: 3px;
+  background: #e71b1b;
+  margin-left: 31%;
+  z-index: 1000;
+}
+
+.home button {
+  background: #f1a635;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.25em;
+  font-size: larger;
+  text-align: center;
+}
+
+.mycontainer {
+  margin-top: -25%;
+  margin-left: 0%;
+  height: 100px;
+  width: 2000px;
+}
+@media screen and(width: 768px) {
+  .homeh {
+    margin: 0rem 5rem;
+    color: white;
+  }
+}
+
+/*Learn More */
+.learn-border {
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: #e71b1b;
+  margin-bottom: 10px;
+}
+.learnmore button {
+  background: #f1a635;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.25em;
+  font-size: larger;
+  text-align: center;
+}
+
+/* register*/
+.register {
+  margin: 0 auto;
+  text-align: left;
+}
+.register label {
+  text-align: left;
+  display: block;
+}
+.register h2 {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.register input,
+.register textarea,
+.register select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.register button {
+  background: #f1a635;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.25em;
+  font-size: larger;
+}
+
+.register-border {
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: #e71b1b;
+  margin-top: -25px;
+  margin-bottom: 10px;
+}
+
+.soccerimage {
+  height: 100%;
+  width: 100%;
+}
+.sandy {
+  height: 3.5%;
+  width: 3.5%;
+  margin-right: 10px;
+}
+
+.center {
+  width: 150px;
+  margin-left: 43%;
+  margin-right: 50%;
+}
