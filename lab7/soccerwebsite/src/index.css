@@ -163,6 +163,19 @@
   margin-right: 10px;
 }
 
+/*Not Found */
+.not-found button {
+  background: #f1a635;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: larger;
+  text-align: center;
+  margin-left: 47%;
+}
+
 .center {
   width: 150px;
   margin-left: 43%;
