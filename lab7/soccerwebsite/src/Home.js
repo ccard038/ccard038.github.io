@@ -4,6 +4,21 @@ import { Link } from "react-router-dom";
 
 let para = "";
 const Home = () => {
+  let title = "Sandy Hill Recreational Soccer";
+  let subtitle = "About Sandy Hill Recreational Soccer";
+  let more = "Learn More";
+
+  if (window.lang === "fr") {
+    title = "Soccer récréatif de Sandy Hill";
+    subtitle = "À propos du soccer récréatif de Sandy Hill";
+    more = "Apprendre encore plus";
+  }
+  if (window.lang === "en") {
+    title = "Sandy Hill Recreational Soccer";
+    subtitle = "About Sandy Hill Recreational Soccer ";
+    more = "Learn More";
+  }
+
   return (
     <div className="home">
       <Container style={{ padding: "25px", backgroundColor: "white" }}>
@@ -11,13 +26,13 @@ const Home = () => {
           <Image src={image} fluid></Image>
           <div className="mycontainer">
             <div className="homeh">
-              <h2>Sandy Hill Recreational Soccer</h2>{" "}
+              <h2>{title}</h2>
               <div className="home-border"></div>
             </div>
           </div>
         </Row>
         <Row>
-          <h2>About Sandy Hill Recreational Soccer</h2>
+          <h2 style={{ color: "black" }}>{subtitle}</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae
@@ -38,7 +53,7 @@ const Home = () => {
         </Row>
         <div className="center">
           <Link to="learnmore">
-            <button className="button">Learn More</button>
+            <button className="button">{more}</button>
           </Link>
         </div>
       </Container>

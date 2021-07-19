@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import LanguageSel from "./LanguageSel";
 import Home from "./Home";
 import LearnMore from "./LearnMore";
 import Standings from "./Standings";
@@ -10,7 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="fill-window">
         <Navbar />
         <div className="content">
           <Switch>
@@ -32,6 +33,7 @@ function App() {
           </Switch>
         </div>
       </div>
+      <LanguageSel />
     </Router>
   );
 }
