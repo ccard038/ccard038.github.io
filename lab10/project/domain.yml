@@ -1,34 +1,74 @@
-version: '2.0'
+version: "2.0"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- inform
-- subscribe
+  - greet
+  - inform
+  - subscribe
+  - Thank
+  - Bye
+  - unsubscribe
 slots:
   email:
     type: unfeaturized
     influence_conversation: false
+   reason:
+    type: unfeaturized
+    influence_conversation: false
 responses:
   utter_greet:
-  - text: |
-      Hello! How can I help you?
-  - text: |
-      Hi!
+    - text: |
+        Hello! How can I help you?
+    - text: |
+        Hi!
   utter_ask_email:
-  - text: |
-      What is your email address?
+    - text: |
+        What is your email address?
   utter_subscribed:
-  - text: |
-      Check your inbox at {email} in order to finish subscribing to the newsletter!
-  - text: You're all set! Check your inbox at {email} to confirm your subscription.
+    - text: |
+        Check your inbox at {email} in order to finish subscribing to the newsletter!
+    - text: You're all set! Check your inbox at {email} to confirm your subscription.
+    utter_thank:
+       - text: |
+           Glad I could help.
+       - text: |
+           You're Welcome!
+       - text: |
+           My pleasure.
+       - text: |
+           Glad I could be of your assistance.
+    utter_goodbye:
+       - text: |
+           Goodbye.
+       - text: |
+           Bye.
+       - text: |
+           Have a nice day.
+       - text: |
+           So long!
+    utter_empathy:
+       - text: |
+           We understand.
+       - text: |
+           No Problem.
+       - text: |
+           We are sad to see you go.
+       - text: |
+           Got it!
 actions:
-- '...'
-- utter_greet
-- utter_subscribed
+  - "..."
+  - utter_greet
+  - utter_subscribed
+  - utter_thank
+  - utter_goodbye
+  - utter_empathy
 forms:
   newsletter_form:
     required_slots:
       email:
-      - type: from_text
+        - type: from_text
+  unsub_form:
+    required_slots:
+      reason:
+        - type: from_text
