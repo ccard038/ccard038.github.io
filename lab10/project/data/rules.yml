@@ -12,3 +12,20 @@ rules:
       - action: newsletter_form
       - active_loop: null
       - action: utter_subscribed
+      - intent: thanks
+      - action: utter_thanks
+
+  - rule: activate unsub form
+    steps:
+      - intent: unsubscribe
+      - action: unsub_form
+      - active_loop: unsub_form
+  - rule: unsub form
+    condition:
+      - active_loop: unsub_form
+    steps:
+      - action: unsub_form
+      - active_loop: null
+      - action: utter_empathy
+      - intent: bye
+      - action: utter_goodbye

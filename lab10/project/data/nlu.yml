@@ -24,23 +24,25 @@ nlu:
       - Please send it to anything@example.com
       - Email is something@example.com
 
-  - intent: Thank
+  - intent: thanks
     examples: |
-      - Thanks!
+      - Thanks
       - Thank you!
-      - Thanks.
+      - I'm glad!
       - Much appreciated!
 
-  - intent: Bye
+  - intent: bye
     examples: |
-      - Bye!
-      - Bye.
+      - bye
+      - Bye
+      - See you!
       - Have a nice day!
       - Goodbye.
 
   - intent: unsubscribe
     examples: |
-      - I want to stop getting the newsletter.
+      - I want to unsubscribe
+      - I want to stop getting the newsletter
       - Can you stop sending me the newsletter?
       - Can you remove me from the mailing list? 
       - I would like to unsubscribe.
